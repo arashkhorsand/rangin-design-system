@@ -1,0 +1,99 @@
+/* رنگین — توکن‌ها. از tokens.json ساخته شده؛ این فایل را دستی ویرایش نکنید. */
+:root, [data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --surface-raised: #ffffff;
+  --glass: rgba(255,255,255,0.72);
+  --line: #e4e7ec;
+  --line-strong: #8a919e;
+  --ink: #12151a;
+  --ink-muted: #5b6370;
+  --on-ink: #ffffff;
+  --brand: #00c26b;
+  --on-brand: #06210f;
+  --brand-deep: #007a45;
+  --brand-tint: #e3f9ee;
+  --pink: #e0007a;
+  --on-pink: #ffffff;
+  --pink-deep: #b8005f;
+  --pink-tint: #ffe5f2;
+  --blue: #1552f0;
+  --on-blue: #ffffff;
+  --blue-tint: #e6edff;
+  --sun: #ffc800;
+  --on-sun: #1f1600;
+  --sun-deep: #7a5c00;
+  --sun-tint: #fff5cc;
+  --success: #00786b;
+  --success-tint: #dff7f2;
+  --danger: #c4221a;
+  --on-danger: #ffffff;
+  --danger-tint: #fee9e7;
+  --focus: var(--blue);
+  --shadow-card: 0 1px 2px rgba(18,21,26,0.06), 0 8px 24px rgba(18,21,26,0.08);
+  --shadow-sheet: 0 -8px 40px rgba(18,21,26,0.16);
+  --glow-brand: 0 8px 24px rgba(0,194,107,0.38);
+  --glow-pink: 0 8px 24px rgba(224,0,122,0.36);
+}
+[data-theme="dark"] {
+  --bg: #0e1014;
+  --surface: #171a20;
+  --surface-raised: #1e222a;
+  --glass: rgba(23,26,32,0.72);
+  --line: #2c313b;
+  --line-strong: #6b7382;
+  --ink: #f4f5f7;
+  --ink-muted: #a3abb8;
+  --on-ink: #12151a;
+  --brand: #00c26b;
+  --on-brand: #06210f;
+  --brand-deep: #3ee08f;
+  --brand-tint: #0d2a1c;
+  --pink: #e0007a;
+  --on-pink: #ffffff;
+  --pink-deep: #ff7dbd;
+  --pink-tint: #33091f;
+  --blue: #6b9bff;
+  --on-blue: #06122e;
+  --blue-tint: #0d1a3d;
+  --sun: #ffc800;
+  --on-sun: #1f1600;
+  --sun-deep: #ffc800;
+  --sun-tint: #332800;
+  --success: #35d6b5;
+  --success-tint: #0b2b26;
+  --danger: #ff6b5e;
+  --on-danger: #2b0703;
+  --danger-tint: #3a0f0b;
+  --focus: var(--blue);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.5);
+  --shadow-sheet: 0 -8px 40px rgba(0,0,0,0.6);
+  --glow-brand: 0 8px 24px rgba(0,194,107,0.38);
+  --glow-pink: 0 8px 24px rgba(224,0,122,0.36);
+  color-scheme: dark;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --font-display: IRANYekanX, IRANSansX, Vazirmatn, Tahoma, sans-serif;
+  --font-sans: IRANYekanX, IRANSansX, Vazirmatn, Tahoma, system-ui, sans-serif;
+}
+.display { font-family: var(--font-display); font-size: 56px; line-height: 1.25; font-weight: 900; }
+.h1 { font-family: var(--font-display); font-size: 36px; line-height: 1.35; font-weight: 800; }
+.h2 { font-family: var(--font-display); font-size: 26px; line-height: 1.45; font-weight: 800; }
+.h3 { font-family: var(--font-display); font-size: 20px; line-height: 1.5; font-weight: 700; }
+.body-lg { font-family: var(--font-sans); font-size: 17px; line-height: 1.9; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 15px; line-height: 1.9; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 14px; line-height: 1.6; font-weight: 700; }
+.caption { font-family: var(--font-sans); font-size: 12px; line-height: 1.7; font-weight: 500; }

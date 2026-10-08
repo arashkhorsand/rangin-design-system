@@ -1,0 +1,60 @@
+<!-- @dsCard height=296 -->
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8">
+<title>رنگین</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:296px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:296px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:296px; }
+  .brand { fill:var(--brand); }
+  .pink { fill:var(--pink); }
+  .blue { fill:var(--blue); }
+  .sun { fill:var(--sun); }
+  .deep { fill:var(--ink); }
+  .cut { fill:var(--bg); }
+  .r-xl { rx:var(--radius-xl); }
+  .r-lg { rx:var(--radius-lg); }
+  .words { position:absolute; left:var(--space-7); bottom:var(--space-5); max-width:420px; direction:rtl; text-align:left; }
+  .name { margin:0; font-family:var(--font-display); font-size:96px; line-height:1.25; font-weight:900; color:var(--ink); }
+  .tag { margin:var(--space-1) 0 0; font-size:14px; line-height:24px; color:var(--ink-muted); }
+</style>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 296" width="480" height="296">
+<!--
+  blocks      brand 176×224 bled off the top (the primary, largest) · pink pill 96 tall bleeding off the right edge · blue 112×136 · sun disc 136 across · ink 176×64 — about 40% of 960×296
+  arrangement one tall brand slab with satellites, bottoms on one line space-5 above the edge, space-4 gutters
+  pattern     discs, from "همه‌چیز گرد است": space-4 discs cut out of the blocks in bg at a space-6 pitch, thinning down the slab, a row on the pill, three on the ink
+  scales      sides in space-2 multiples; gutters space-4; pitch space-6; corners radius-xl and radius-lg; pill rx = half its height (48); discs r = radius-sm
+-->
+<rect class="brand r-xl" x="16" y="-32" width="176" height="224" rx="32"/>
+<rect class="deep r-lg" x="16" y="208" width="176" height="64" rx="22"/>
+<rect class="pink" x="208" y="24" width="304" height="96" rx="48"/>
+<rect class="blue r-lg" x="208" y="136" width="112" height="136" rx="22"/>
+<circle class="sun" cx="404" cy="204" r="68"/>
+<g class="cut">
+<circle cx="56" cy="40" r="8"/><circle cx="88" cy="40" r="8"/><circle cx="120" cy="40" r="8"/><circle cx="152" cy="40" r="8"/>
+<circle cx="88" cy="72" r="8"/><circle cx="120" cy="72" r="8"/><circle cx="152" cy="72" r="8"/>
+<circle cx="120" cy="104" r="8"/><circle cx="152" cy="104" r="8"/>
+<circle cx="152" cy="136" r="8"/>
+<circle cx="264" cy="72" r="8"/><circle cx="296" cy="72" r="8"/><circle cx="328" cy="72" r="8"/><circle cx="360" cy="72" r="8"/><circle cx="392" cy="72" r="8"/><circle cx="424" cy="72" r="8"/>
+<circle cx="56" cy="240" r="8"/><circle cx="88" cy="240" r="8"/><circle cx="120" cy="240" r="8"/>
+</g>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">رنگین</h1>
+<p class="tag">دیزاین سیستم فارسی و راست‌به‌چین: زمینهٔ سفید، رنگ‌های تند.</p>
+</div>
+</div>
+</body>
+</html>

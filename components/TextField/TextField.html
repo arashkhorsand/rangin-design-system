@@ -1,0 +1,34 @@
+<!-- @dsCard group="فرم" height=240 -->
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><title>TextField</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="rg" dir="rtl">
+<div class="rg-row" style="align-items:flex-start">
+  <label class="rg-field" style="flex:1 1 260px">
+    <span class="rg-field-label">شمارهٔ موبایل</span>
+    <span class="rg-input">
+      <input id="tf-mobile" type="tel" inputmode="numeric" dir="ltr" placeholder="۰۹۱۲ ۳۴۵ ۶۷۸۹" autocomplete="tel">
+      <span class="rg-input-affix">+۹۸</span>
+    </span>
+    <span class="rg-field-help">کد تأیید به این شماره پیامک می‌شود.</span>
+  </label>
+  <label class="rg-field rg-field-error" style="flex:1 1 260px">
+    <span class="rg-field-label">کد پستی</span>
+    <span class="rg-input">
+      <input id="tf-postal" type="text" inputmode="numeric" dir="ltr" value="۱۴۳۵۷" aria-invalid="true">
+    </span>
+    <span class="rg-field-help"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v5M12 16v.5"/></svg>کد پستی ده رقم است.</span>
+  </label>
+  <label class="rg-field" style="flex:1 1 260px">
+    <span class="rg-field-label">نام و نام خانوادگی</span>
+    <span class="rg-input">
+      <input id="tf-name" type="text" value="سارا محمدی" autocomplete="name">
+    </span>
+  </label>
+</div>
+</body>
+</html>

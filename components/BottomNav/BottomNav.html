@@ -1,0 +1,26 @@
+<!-- @dsCard group="ناوبری" height=116 -->
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head><meta charset="utf-8"><title>BottomNav</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
+<style>body.rg{padding-block:var(--space-5);background:var(--surface)}</style>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="rg" dir="rtl">
+<nav class="rg-nav" aria-label="ناوبری اصلی">
+  <button class="rg-nav-item" type="button" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg><span>خانه</span></button>
+  <button class="rg-nav-item" type="button" aria-label="جست‌وجو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg><span>جست‌وجو</span></button>
+  <button class="rg-nav-item rg-nav-dot" type="button" aria-label="سفارش‌ها، یک سفارش فعال"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 12H5z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg><span>سفارش‌ها</span></button>
+  <button class="rg-nav-item" type="button" aria-label="حساب من"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>حساب من</span></button>
+</nav>
+<script>
+  document.querySelectorAll('.rg-nav-item').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.rg-nav-item').forEach(function (o) { o.removeAttribute('aria-current'); });
+      b.setAttribute('aria-current', 'page');
+    });
+  });
+</script>
+</body>
+</html>
