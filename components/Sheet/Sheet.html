@@ -1,23 +1,16 @@
-<!-- @dsCard group="لایه" height=330 -->
+<!-- @dsCard group="Components" viewport="700x330" name="Sheet" subtitle="Bottom sheet confirm with verb actions" -->
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head><meta charset="utf-8"><title>Sheet</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
-<style>body.rg{padding:0}.rg-scrim{align-items:center}</style>
-<link rel="stylesheet" href="../../tokens.css">
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>Sheet</title>
 <link rel="stylesheet" href="../../styles.css">
-</head>
-<body class="rg" dir="rtl">
-<div class="rg-scrim">
-  <section class="rg-sheet" role="dialog" aria-labelledby="sheet-title">
-    <span class="rg-sheet-grab"></span>
-    <h3 class="rg-sheet-title" id="sheet-title">سفارش لغو شود؟</h3>
-    <p class="rg-sheet-body">رستوران هنوز آماده‌سازی را شروع نکرده است. مبلغ ۳۴۵٬۰۰۰ تومان تا ۷۲ ساعت به کارت شما برمی‌گردد.</p>
-    <div class="rg-sheet-actions">
-      <button class="rg-btn rg-btn-danger" type="button">لغو سفارش</button>
-      <button class="rg-btn rg-btn-outline" type="button">نگهش دار</button>
-    </div>
-  </section>
-</div>
-</body>
-</html>
+<style>html,body{margin:0}body.rg{padding:0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body class="rg" dir="rtl"><div id="root"></div>
+<script type="text/babel">
+const { Sheet, Button } = window.RanginDesignSystem_06512a;
+ReactDOM.createRoot(document.getElementById('root')).render(<div className="rg-scrim" style={{alignItems:'center'}}>
+<Sheet title="سفارش لغو شود؟" actions={<><Button variant="danger">لغو سفارش</Button><Button variant="outline">نگهش دار</Button></>}>رستوران هنوز آماده‌سازی را شروع نکرده است. مبلغ ۳۴۵٬۰۰۰ تومان تا ۷۲ ساعت به کارت شما برمی‌گردد.</Sheet>
+</div>);
+</script></body></html>

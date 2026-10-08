@@ -1,42 +1,18 @@
-<!-- @dsCard group="فروشگاه" height=372 -->
+<!-- @dsCard group="Components" viewport="700x380" name="ProductCard" subtitle="Discounted · regular · out of stock" -->
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head><meta charset="utf-8"><title>ProductCard</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
-<style>.ph{display:grid;place-items:center}.ph i{width:46%;aspect-ratio:1;border-radius:var(--radius-pill)}.ph-sun{background:var(--sun-tint)}.ph-sun i{background:var(--sun)}.ph-brand{background:var(--brand-tint)}.ph-brand i{background:var(--brand);border-radius:var(--radius-lg)}.ph-pink{background:var(--pink-tint)}.ph-pink i{background:var(--pink);border-radius:var(--radius-md);transform:rotate(12deg)}</style>
-<link rel="stylesheet" href="../../tokens.css">
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>ProductCard</title>
 <link rel="stylesheet" href="../../styles.css">
-</head>
-<body class="rg" dir="rtl">
-<div class="rg-row" style="align-items:stretch">
-  <article class="rg-product">
-    <span class="rg-badge rg-badge-off">٪۲۵</span>
-    <div class="rg-product-media ph ph-sun"><i></i></div>
-    <h3 class="rg-product-title">زعفران سرگل قائنات، یک مثقال</h3>
-    <div class="rg-product-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.8z" fill="currentColor"/></svg>۴٫۷ <span>(۱٬۲۸۰)</span></div>
-    <div class="rg-product-foot">
-      <div class="rg-price"><span class="rg-price-old">۸۶۰٬۰۰۰</span><span class="rg-price-now">۶۴۵٬۰۰۰<small>تومان</small></span></div>
-      <button class="rg-btn rg-btn-primary rg-btn-icon rg-btn-sm" type="button" aria-label="افزودن به سبد"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-    </div>
-  </article>
-  <article class="rg-product">
-    <div class="rg-product-media ph ph-brand"><i></i></div>
-    <h3 class="rg-product-title">پستهٔ اکبری خام رفسنجان، ۵۰۰ گرم</h3>
-    <div class="rg-product-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.8z" fill="currentColor"/></svg>۴٫۹ <span>(۳۴۲)</span></div>
-    <div class="rg-product-foot">
-      <div class="rg-price"><span class="rg-price-now">۷۲۰٬۰۰۰<small>تومان</small></span></div>
-      <button class="rg-btn rg-btn-primary rg-btn-icon rg-btn-sm" type="button" aria-label="افزودن به سبد"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-    </div>
-  </article>
-  <article class="rg-product">
-    <div class="rg-product-media ph ph-pink"><i></i></div>
-    <h3 class="rg-product-title">گز کرمانی اصفهان، جعبهٔ ۴۵۰ گرمی</h3>
-    <div class="rg-product-meta"><span class="rg-badge">ناموجود</span></div>
-    <div class="rg-product-foot">
-      <div class="rg-price"><span class="rg-price-now">۲۹۰٬۰۰۰<small>تومان</small></span></div>
-      <button class="rg-btn rg-btn-outline rg-btn-sm" type="button">خبرم کن</button>
-    </div>
-  </article>
-</div>
-</body>
-</html>
+<style>html,body{margin:0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body class="rg" dir="rtl"><div id="root"></div>
+<script type="text/babel">
+const { ProductCard } = window.RanginDesignSystem_06512a;
+ReactDOM.createRoot(document.getElementById('root')).render(<div className="rg-row" style={{alignItems:'stretch'}}>
+<ProductCard placeholder="sun" discount={25} title="زعفران سرگل قائنات، یک مثقال" rating={4.7} ratingCount={1280} oldPrice={860000} price={645000} />
+<ProductCard placeholder="brand" title="پستهٔ اکبری خام رفسنجان، ۵۰۰ گرم" rating={4.9} ratingCount={342} price={720000} />
+<ProductCard placeholder="pink" title="گز کرمانی اصفهان، جعبهٔ ۴۵۰ گرمی" outOfStock price={290000} />
+</div>);
+</script></body></html>

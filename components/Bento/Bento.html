@@ -1,31 +1,19 @@
-<!-- @dsCard group="چیدمان" height=360 -->
+<!-- @dsCard group="Components" viewport="700x330" name="Bento" subtitle="Unequal round tiles; one dominant brand tile + aura" -->
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head><meta charset="utf-8"><title>Bento</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
-<link rel="stylesheet" href="../../tokens.css">
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>Bento</title>
 <link rel="stylesheet" href="../../styles.css">
-</head>
-<body class="rg" dir="rtl">
-<div class="rg-bento">
-  <div class="rg-bento-cell rg-bento-brand rg-bento-wide rg-bento-tall">
-    <span class="rg-bento-shape"></span>
-    <span class="rg-bento-num">۳۰ دقیقه</span>
-    <h3>از سفارش تا درِ خانه</h3>
-    <p>پیک را لحظه‌به‌لحظه روی نقشه ببینید.</p>
-  </div>
-  <div class="rg-bento-cell rg-bento-aura rg-bento-wide">
-    <h3>پرداخت در محل یا اعتباری</h3>
-    <p>الان بخرید، سر ماه پرداخت کنید.</p>
-  </div>
-  <div class="rg-bento-cell rg-bento-pink">
-    <span class="rg-bento-num">٪۴۰</span>
-    <p>تخفیف سفارش اول</p>
-  </div>
-  <div class="rg-bento-cell rg-bento-ink">
-    <span class="rg-bento-num">۲۴</span>
-    <p>ساعته، هر روز هفته</p>
-  </div>
-</div>
-</body>
-</html>
+<style>html,body{margin:0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body class="rg" dir="rtl"><div id="root"></div>
+<script type="text/babel">
+const { Bento, BentoCell } = window.RanginDesignSystem_06512a;
+ReactDOM.createRoot(document.getElementById('root')).render(<Bento>
+<BentoCell tone="brand" wide tall shape num="۳۰ دقیقه" title="از سفارش تا درِ خانه" text="پیک را لحظه‌به‌لحظه روی نقشه ببینید." />
+<BentoCell tone="aura" wide title="پرداخت در محل یا اعتباری" text="الان بخرید، سر ماه پرداخت کنید." />
+<BentoCell tone="pink" num="٪۴۰" text="تخفیف سفارش اول" />
+<BentoCell tone="ink" num="۲۴" text="ساعته، هر روز هفته" />
+</Bento>);
+</script></body></html>

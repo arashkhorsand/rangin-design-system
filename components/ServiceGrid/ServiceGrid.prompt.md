@@ -1,4 +1,17 @@
-# ServiceGrid
+Four-column service launcher for the home of a multi-service app.
+
+```jsx
+<ServiceGrid items={[{ label: "تاکسی", icon: "car", tone: "solid" }, { label: "غذا", icon: "bowl", tone: "pink" }]} onSelect={open} />
+```
+
+**Props:** tone: brand | pink | blue | sun | solid (once, main service) | none. Max 2 rows; extra under «بیشتر».
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 شبکهٔ چهارستونهٔ سرویس‌ها برای صفحهٔ اول اپلیکیشن چندسرویسی.
 

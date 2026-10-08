@@ -1,4 +1,19 @@
-# Button
+Pill button for any action; only one green primary per view.
+
+```jsx
+<Button variant="primary" icon="bag">افزودن به سبد</Button>
+<Button variant="outline" size="sm">ویرایش آدرس</Button>
+<Button variant="primary" iconOnly icon="plus" aria-label="افزودن" />
+```
+
+**Props:** variant: surface | primary | ink | pink | tint | outline | danger · size: sm(36) | md(48) | lg(56) · block · iconOnly · icon / iconEnd.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 دکمهٔ قرصی برای هر اقدام؛ در هر نما فقط یک دکمهٔ اصلی سبز.
 

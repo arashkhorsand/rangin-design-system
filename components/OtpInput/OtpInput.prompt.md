@@ -1,4 +1,17 @@
-# OtpInput
+SMS one-time-code boxes for mobile-number login; auto-submits when full.
+
+```jsx
+<OtpInput label="کد تأیید پیامک‌شده به ۰۹۱۲ ۳۴۵ ۶۷۸۹" seconds={107} onComplete={verify} onEditNumber={back} />
+```
+
+**Props:** length (default 5), value/defaultValue, onChange, onComplete, seconds (resend countdown), onResend, onEditNumber.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 خانه‌های کد تأیید پیامکی برای ورود با شمارهٔ موبایل.
 

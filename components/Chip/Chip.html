@@ -1,26 +1,16 @@
-<!-- @dsCard group="انتخاب" height=80 -->
+<!-- @dsCard group="Components" viewport="700x90" name="Chip" subtitle="Scrolling filter row; selected fills with ink" -->
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head><meta charset="utf-8"><title>Chip</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
-<link rel="stylesheet" href="../../tokens.css">
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>Chip</title>
 <link rel="stylesheet" href="../../styles.css">
-</head>
-<body class="rg" dir="rtl">
-<div class="rg-chips" role="group" aria-label="دسته‌بندی">
-  <button class="rg-chip" type="button" aria-pressed="true">همه</button>
-  <button class="rg-chip" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16a8 8 0 0 1-16 0zM12 4v4M8 5v3M16 5v3"/></svg>ایرانی</button>
-  <button class="rg-chip" type="button" aria-pressed="false">فست‌فود</button>
-  <button class="rg-chip" type="button" aria-pressed="false">کافه</button>
-  <button class="rg-chip" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>زیر ۳۰ دقیقه</button>
-  <button class="rg-chip" type="button" aria-pressed="false">ارسال رایگان</button>
-</div>
-<script>
-  document.querySelectorAll('.rg-chip').forEach(function (c) {
-    c.addEventListener('click', function () {
-      document.querySelectorAll('.rg-chip').forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)); });
-    });
-  });
-</script>
-</body>
-</html>
+<style>html,body{margin:0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body class="rg" dir="rtl"><div id="root"></div>
+<script type="text/babel">
+const { Chip, ChipGroup } = window.RanginDesignSystem_06512a;
+function Demo(){const [s,setS]=React.useState('همه');const L=[['همه'],['ایرانی','bowl'],['فست‌فود'],['کافه'],['زیر ۳۰ دقیقه','clock'],['ارسال رایگان']];
+return <ChipGroup label="دسته‌بندی">{L.map(([l,i])=><Chip key={l} icon={i} pressed={s===l} onClick={()=>setS(l)}>{l}</Chip>)}</ChipGroup>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

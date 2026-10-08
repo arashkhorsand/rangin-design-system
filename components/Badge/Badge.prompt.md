@@ -1,4 +1,18 @@
-# Badge
+Small non-clickable badge for order status, feature labels and discount percent.
+
+```jsx
+<Badge tone="success" icon="check">تحویل شد</Badge>
+<Badge tone="off">٪۲۵</Badge>
+```
+
+**Props:** tone: neutral | brand | pink | blue | sun | success | danger | off. Status tones always carry an icon.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 نشان کوچک برای وضعیت سفارش، ویژگی و درصد تخفیف.
 

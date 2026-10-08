@@ -1,4 +1,20 @@
-# BottomNav
+Floating glass pill bottom navigation for mobile apps with 3–5 destinations.
+
+```jsx
+<BottomNav current="home" onChange={setTab} items={[
+  { id: "home", label: "خانه", icon: "home" },
+  { id: "orders", label: "سفارش‌ها", icon: "bag", dot: true, dotLabel: "سفارش‌ها، یک سفارش فعال" },
+]} />
+```
+
+**Props:** Only the active item shows its label. Position it yourself: fixed, space-4 from edges + safe-area.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 نوار ناوبری پایین موبایل: قرص شیشه‌ای شناور با سه تا پنج مقصد.
 

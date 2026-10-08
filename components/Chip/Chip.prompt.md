@@ -1,4 +1,20 @@
-# Chip
+Pill filter/category chip in a horizontally scrolling row; selected state fills with ink.
+
+```jsx
+<ChipGroup label="دسته‌بندی">
+  <Chip pressed>همه</Chip>
+  <Chip icon="clock">زیر ۳۰ دقیقه</Chip>
+</ChipGroup>
+```
+
+**Props:** pressed, icon (16px). Wrap in ChipGroup (rg-chips).
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 چیپ قرصی برای فیلتر و دسته‌بندی، در یک ردیف افقی که اسکرول می‌خورد.
 

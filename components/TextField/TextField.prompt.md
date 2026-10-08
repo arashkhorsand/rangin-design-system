@@ -1,4 +1,17 @@
-# TextField
+Text field with an always-visible label, help text and error state.
+
+```jsx
+<TextField label="شمارهٔ موبایل" type="tel" inputMode="numeric" dir="ltr" affix="+۹۸" help="کد تأیید به این شماره پیامک می‌شود." />
+```
+
+**Props:** label, help, error (danger border + icon), affix, dir="ltr" for numbers/email. Input text stays 16px.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 فیلد متنی با برچسب بالای آن، متن راهنما و حالت خطا.
 

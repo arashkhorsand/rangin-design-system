@@ -1,4 +1,21 @@
-# Bento
+Bento grid of unequal round tiles for feature intros, landing pages and dashboard summaries.
+
+```jsx
+<Bento>
+  <BentoCell tone="brand" wide tall shape num="۳۰ دقیقه" title="از سفارش تا درِ خانه" text="پیک را لحظه‌به‌لحظه روی نقشه ببینید." />
+  <BentoCell tone="aura" wide title="پرداخت در محل یا اعتباری" />
+  <BentoCell tone="pink" num="٪۴۰" text="تخفیف سفارش اول" />
+</Bento>
+```
+
+**Props:** BentoCell tone: brand | pink | blue | sun | ink | aura | (none = surface); wide, tall, shape, num, title, text.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 چیدمان بنتو: کاشی‌های نابرابر و بسیار گرد برای معرفی ویژگی‌ها، صفحهٔ فرود و خلاصهٔ داشبورد.
 

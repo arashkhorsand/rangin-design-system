@@ -1,0 +1,29 @@
+/* Semantic aliases over the source tokens (intentional addition; values all resolve to tokens.css). */
+:root {
+  --surface-page: var(--bg);
+  --surface-subtle: var(--surface);
+  --surface-card: var(--surface-raised);
+  --text-body: var(--ink);
+  --text-muted: var(--ink-muted);
+  --text-link: var(--blue);
+  --text-price: var(--ink);
+  --border-decorative: var(--line);
+  --border-control: var(--line-strong);
+  --action-primary: var(--brand);
+  --action-primary-text: var(--on-brand);
+  --action-campaign: var(--pink);
+  --action-campaign-text: var(--on-pink);
+  --control-height: var(--space-7);
+  --control-height-sm: 36px;
+  --control-height-lg: 56px;
+  --page-gutter-mobile: var(--space-4);
+  --touch-target-min: var(--space-7);
+  --duration-press: 120ms; /* @kind other */
+  --duration-base: 200ms; /* @kind other */
+  --press-scale: .97; /* @kind other */
+  --blur-glass: 16px;
+  --scrim: rgba(18,21,26,0.4);
+}
+[data-theme="dark"] {
+  --scrim: rgba(0,0,0,0.6);
+}

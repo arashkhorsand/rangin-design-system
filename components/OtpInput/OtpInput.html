@@ -1,34 +1,16 @@
-<!-- @dsCard group="فرم" height=176 -->
+<!-- @dsCard group="Components" viewport="700x180" name="OtpInput" subtitle="5-digit SMS code with resend countdown" -->
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head><meta charset="utf-8"><title>OtpInput</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&amp;display=swap">
-<link rel="stylesheet" href="../../tokens.css">
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>OtpInput</title>
 <link rel="stylesheet" href="../../styles.css">
-</head>
-<body class="rg" dir="rtl">
-<div class="rg-stack" style="max-width:300px">
-  <span class="rg-field-label">کد تأیید پیامک‌شده به ۰۹۱۲ ۳۴۵ ۶۷۸۹</span>
-  <div class="rg-otp" role="group" aria-label="کد تأیید پنج‌رقمی">
-    <input id="otp-1" class="is-filled" inputmode="numeric" maxlength="1" value="۴" aria-label="رقم ۱" autocomplete="one-time-code">
-    <input id="otp-2" class="is-filled" inputmode="numeric" maxlength="1" value="۷" aria-label="رقم ۲">
-    <input id="otp-3" class="is-filled" inputmode="numeric" maxlength="1" value="۲" aria-label="رقم ۳">
-    <input id="otp-4" inputmode="numeric" maxlength="1" aria-label="رقم ۴">
-    <input id="otp-5" inputmode="numeric" maxlength="1" aria-label="رقم ۵">
-  </div>
-  <div class="rg-otp-meta"><span>ارسال دوباره تا <b>۰۱:۴۷</b></span><button class="rg-btn rg-btn-tint rg-btn-sm" type="button">ویرایش شماره</button></div>
-</div>
-<script>
-  var boxes = Array.prototype.slice.call(document.querySelectorAll('.rg-otp input'));
-  boxes.forEach(function (el, i) {
-    el.addEventListener('input', function () {
-      el.classList.toggle('is-filled', !!el.value);
-      if (el.value && boxes[i + 1]) boxes[i + 1].focus();
-    });
-    el.addEventListener('keydown', function (e) {
-      if (e.key === 'Backspace' && !el.value && boxes[i - 1]) boxes[i - 1].focus();
-    });
-  });
-</script>
-</body>
-</html>
+<style>html,body{margin:0}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body class="rg" dir="rtl"><div id="root"></div>
+<script type="text/babel">
+const { OtpInput } = window.RanginDesignSystem_06512a;
+function Demo(){const [s,setS]=React.useState(107);React.useEffect(()=>{const t=setInterval(()=>setS(x=>Math.max(0,x-1)),1000);return()=>clearInterval(t)},[]);
+return <div style={{maxWidth:300}}><OtpInput label="کد تأیید پیامک‌شده به ۰۹۱۲ ۳۴۵ ۶۷۸۹" defaultValue="472" seconds={s} onResend={()=>setS(120)} onEditNumber={()=>{}} /></div>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

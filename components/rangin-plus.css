@@ -1,0 +1,43 @@
+/* رنگین+ — visual enhancements layered on the verbatim source CSS (not in the upstream repo). Same tokens, same rules; adds states, motion and layout fixes. */
+
+/* Text */
+.rg h1, .rg h2, .rg h3, .rg .display, .rg .h1, .rg .h2, .rg .h3 { text-wrap: balance; }
+.rg p { text-wrap: pretty; }
+.rg ::selection { background: var(--brand-tint); color: var(--ink); }
+
+/* Layout fixes */
+.rg-bento { grid-auto-rows: minmax(132px, auto); }
+.rg-product-title { min-height: 3.4em; }
+.rg-product-foot { padding-top: var(--space-1); }
+
+/* Transitions */
+.rg-chip { transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .12s ease; }
+.rg-chip:active { transform: scale(.97); }
+.rg-nav-item { transition: background-color .2s ease, color .2s ease; }
+.rg-nav-item:active { transform: scale(.97); }
+.rg-product { transition: box-shadow .2s ease, border-color .2s ease; }
+.rg-input { transition: border-color .15s ease; }
+
+/* Hover — pointer devices only; touch keeps press feedback */
+@media (hover: hover) {
+  .rg-btn:not(:disabled):not([aria-disabled="true"]):hover { filter: brightness(.95); }
+  .rg-btn-outline:not(:disabled):hover { filter: none; border-color: var(--ink); }
+  .rg-chip[aria-pressed="false"]:hover { border-color: var(--ink); }
+  .rg-nav-item:not([aria-current="page"]):hover { color: var(--ink); background: var(--surface); }
+  .rg-service:hover .rg-service-icon { transform: translateY(-2px); }
+  .rg-product:hover { border-color: transparent; box-shadow: var(--shadow-card); }
+  .rg-input:hover:not(:focus-within) { border-color: var(--ink-muted); }
+  .rg-field-error .rg-input:hover:not(:focus-within) { border-color: var(--danger); }
+}
+
+/* Sheet entrance + scrim */
+@keyframes rg-sheet-in { from { transform: translateY(32px); opacity: 0; } }
+@keyframes rg-fade-in { from { opacity: 0; } }
+.rg-sheet { animation: rg-sheet-in .2s cubic-bezier(.2, .8, .2, 1); }
+.rg-scrim-overlay { background: var(--scrim); animation: rg-fade-in .2s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rg-chip, .rg-nav-item, .rg-product, .rg-input { transition: none; }
+  .rg-sheet, .rg-scrim-overlay { animation: none; }
+  .rg-service:hover .rg-service-icon { transform: none; }
+}

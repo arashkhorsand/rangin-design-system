@@ -1,4 +1,19 @@
-# Sheet
+Bottom sheet for confirmations, pickers and short forms — use instead of a centered modal.
+
+```jsx
+<Sheet title="سفارش لغو شود؟" actions={<><Button variant="danger">لغو سفارش</Button><Button variant="outline">نگهش دار</Button></>}>
+  مبلغ تا ۷۲ ساعت به کارت شما برمی‌گردد.
+</Sheet>
+```
+
+**Props:** You own the scrim, open/close and focus trap. Primary action first (right).
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 شیت پایین: لایه‌ای که از پایین صفحه بالا می‌آید، برای تأیید، انتخاب و فرم کوتاه.
 

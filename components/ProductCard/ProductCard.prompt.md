@@ -1,4 +1,17 @@
-# ProductCard
+Shop product card with image, two-line name, rating, Toman price and add button.
+
+```jsx
+<ProductCard discount={25} title="زعفران سرگل قائنات، یک مثقال" rating={4.7} ratingCount={1280} oldPrice={860000} price={645000} onAdd={add} />
+```
+
+**Props:** Numbers auto-format to Persian digits with «٬». outOfStock swaps to neutral badge + «خبرم کن». placeholder: sun | brand | pink | blue when no image.
+
+Render inside a root with `class="rg"` and `dir="rtl"`.
+
+---
+
+## Source guidance (fa, verbatim from repo)
+
 
 کارت محصول برای فهرست و اسلایدر فروشگاه: تصویر، نام، امتیاز، قیمت به تومان و دکمهٔ افزودن.
 
